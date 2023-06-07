@@ -251,7 +251,7 @@ body {
     transform: skewX(-45deg) scale(1, 1);
 }
 
-/* ---- MEDIA QUERY PARA > 320 --- */
+/* ---- MEDIA QUERY PARA > 320 ----*/
 @media screen and (min-width: 350px) and (min-height: 500px){
     .header {
         min-height: 100px;
