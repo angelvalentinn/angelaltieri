@@ -258,7 +258,7 @@ body {
     }
     
     .header__title {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
 
     .header__subtitle {
@@ -266,11 +266,11 @@ body {
     }
 
     .about__title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .about__text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .icons a {
@@ -283,11 +283,11 @@ body {
     }
 
     .miCv {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .cv a{
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 
