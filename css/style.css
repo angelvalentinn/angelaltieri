@@ -590,6 +590,10 @@ body {
     .wrapper {
         justify-self: center;
     }
+
+    .header__title {
+        font-size: 4rem;
+    }
     /* ---- MAIN ---- */
 
     .main {
@@ -601,7 +605,7 @@ body {
     }
 
     .about__title {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     
     .about__title::before {
@@ -609,21 +613,21 @@ body {
     }
     
     .about__text {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.7;
         width: 700px;
     }
 
     .icons a {
-        height: 45px;
-        width: 45px;
+        height: 50px;
+        width: 50px;
     }
 
     .icons a i {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .miCv {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 }
