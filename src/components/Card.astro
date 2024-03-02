@@ -19,8 +19,8 @@ const { title, description, img , tecnologias, repo, deploy  } = Astro.props;
             }
         </ul>
         <div class="proyecto-buttons">
-            <a target="_blank" data-tooltip="Ver repo" href={repo}><i class="bi bi-github" data-tooltip="Ver repositorio"></i></a>
-            <a target="_blank" data-tooltip="Ver Deploy" href={deploy}><i class="bi bi-link" data-tooltip="Ver Deploy"></i></a>
+            <a target="_blank" aria-label="Ver repositorio" href={repo}><i class="bi bi-github" data-tooltip="Ver repositorio"></i></a>
+            <a target="_blank" aria-label="Ver Deploy" href={deploy}><i class="bi bi-link" data-tooltip="Ver Deploy"></i></a>
         </div>
     </div>
 </article>
@@ -60,12 +60,13 @@ const { title, description, img , tecnologias, repo, deploy  } = Astro.props;
 
             .proyecto-ul {
                 display: flex;
-                gap: 1rem;
+                gap: .3rem;
                 flex-wrap: wrap;
 
                 li {
                     border: 1px solid #dddddd42;
-                    padding: 0.2rem;
+                    padding: 0.3rem;
+                    border-radius: 8px;
                 }
             }
 

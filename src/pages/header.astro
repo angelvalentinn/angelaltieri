@@ -13,14 +13,14 @@
         <nav id="nav">
             <ul>
                 <li class="li"><a href="#inicio">Inicio</a></li>
-                <li class="li"> <a href="#habilidades">Habilidades</a></li>
                 <li class="li"> <a href="#proyectos">Proyectos</a></li>
+                <li class="li"> <a href="#habilidades">Habilidades</a></li>
             </ul>
     
             <ul>
                 <li><a href="../../cv.pdf" target="_blank"  class="cv">CV</a></li>
-                <li><a href="https://www.linkedin.com/in/%C3%A1ngel-valent%C3%ADn-altieri-a319a0256/" target="_blank" data-tooltip="Ver mi Linkedin"><i class="bi bi-linkedin"></i></a></li>
-                <li><a href="https://github.com/angelvalentinn" target="_blank"  data-tooltip="Ver mi Github"><i class="bi bi-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/%C3%A1ngel-valent%C3%ADn-altieri-a319a0256/" target="_blank" aria-label="Ver mi Linkedin" data-tooltip="Ver mi Linkedin"><i class="bi bi-linkedin"></i></a></li>
+                <li><a href="https://github.com/angelvalentinn" target="_blank"  aria-label="Ver mi Github"><i class="bi bi-github"></i></a></li>
             </ul>
         </nav>
     
@@ -44,14 +44,17 @@
         .logo {
             display: flex;
             align-items: center;
-
+            user-select: none;
 
             .right-key {
                 transform:rotateY(180deg);
             }
+
             span {
                 color: var(--clr-primary);
             }
+
+
         }
 
         .bars__menu{
@@ -105,6 +108,10 @@
 
                     .bi-linkedin {
                         color: #0a66c2;
+                        transition: .2s ease color;
+                        &:hover {
+                            color: #0a5aa9;
+                        }
                     }
                 }
 

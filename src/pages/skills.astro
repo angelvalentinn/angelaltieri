@@ -101,13 +101,16 @@
                     }
 
                     &:hover::before {
-                        visibility: visible;
+                        
                         transform: translateX(-50%) translateY(0rem);
+                        animation: ida-y-vuelta .3s ease;
+
                     }
 
                     &::before {
                         content: attr(data-tooltip);
                         position: absolute;
+
                         top: -25px;
                         left: 50%;
                         display: flex;
@@ -123,12 +126,24 @@
                         color: var(--clr-white-text);
                         border-radius: 6px;
                         transform: translateX(-50%) translateY(2rem);
-                        visibility: hidden;
                         transition: transform 0.3s ease;
+                        
+                        animation: ida-y-vuelta 2s ease-in-out infinite, salida-brusca .3s forwards;
                     }
                 }
             }
         }
+    }
+
+    @keyframes ida-y-vuelta {
+        0% { opacity: 0; }
+        50% { opacity: .5; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes salida-brusca {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
     }
 
     @media screen and (width > 800px) {
