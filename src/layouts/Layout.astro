@@ -1,0 +1,105 @@
+---
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="icon" href="../../me.webp" type="image/webp">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+		<link rel="canonical" href="https://angelaltieri.netlify.app/">
+		<link rel="alternate" type="application/rss+xml" href="https://angelaltieri.netlify.app/" title="Ángel Altieri 👨‍💻 | Portfolio personal">
+		
+		<meta property="og:title" content="Ángel Altieri 👨‍💻 | Portfolio personal">
+		<meta property="og:site_name" content="Ángel Altieri - Portfolio">
+		<meta property="og:url" content=https://angelaltieri.netlify.app/>
+		<meta property="og:description" content="Este es mi portfolio personal, donde podes conocerme un poco a mí y mis proyectos webs 👨‍💻 👾">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="../../me.webp">
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+	}
+
+	:root {
+		--clr-primary: #3a709b;
+		--clr-secondary: #1b1b1f;
+		--clr-card: #2c2c33;
+		--clr-terciary: #4bbbbd;
+		--clr-white-text: #fff9e7;
+	}
+
+	body {
+		overflow-x: hidden;
+		font-family: 'Montserrat', sans-serif;
+		color: var(--clr-white-text);
+		
+		background: radial-gradient(ellipse at top, #142534 , var(--clr-secondary)70%);
+		
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--clr-white-text);
+	}
+
+	p {
+		opacity: .9;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+	@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+</style>

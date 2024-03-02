@@ -1,0 +1,151 @@
+
+<section id="inicio">
+    <article class="first">
+        <img src="../../me.webp" alt="Foto de Ángel Valentín Altieri">
+        <h2>Ángel Valentín Altieri</h2>
+        <p><i class="bi bi-geo-alt-fill"></i>Argentina, Buenos Aires</p>
+    </article>
+
+    <article class="second">
+        <h1>Estudiante de Sistemas & Desarrollador Full Stack Trainee</h1>
+        <div class="paragraphs">
+            <p>
+                Tengo 19 años y estoy en constante aprendizaje, tanto en la universidad como autodidacta. 
+            </p>
+            <p>
+                Al interesarme por la rama del Desarrollo Web, durante mi auto capacitación front-end aprendí a analizar,
+                diseñar e implementar sitios web, a crear soluciones web dinámicas y también crear SPA consumiendo APIS.
+            </p>
+            <p>Actualmente estoy estudiando backend con JavaScript.</p>
+
+        </div>
+    </article>
+</section>
+
+<style>
+    section {
+        padding-top: 4rem;
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        -webkit-animation: fade-in-fwd 1s both;
+	    animation: fade-in-fwd 1s both;
+        
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .first {
+            gap: .5rem;
+            img {
+                height: 170px;
+                width: 170px;
+                object-fit: cover;
+                filter: drop-shadow(0px 0px 6px  #ffffff2a);
+                z-index: -10;
+            }
+            
+            h2 {
+                margin-top: .6rem;
+                font-size: 1.6rem;
+                color: var(--clr-primary);
+                font-family: 'Dancing Script', sans-serif;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 0.9rem;
+                font-weight: 200;
+                i {
+                    color: var(--clr-primary);
+                    margin-right: 8px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .second {
+            h1 {
+                font-size: 1.4rem;
+                text-wrap: pretty;
+                font-weight: bold;
+                background: linear-gradient(var(--clr-primary), var(--clr-terciary));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    
+
+    @media screen and (width > 550px) {
+        section {
+            margin-top: 5rem;
+
+            .first {
+                gap: .5rem;
+
+                img {
+                    height: 200px;
+                    width: 200px;
+                }
+                
+                h2 {
+                    font-size: 2rem;
+                }
+
+            }
+
+            .second {
+                
+                h1 {
+                    font-size: 1.9rem;
+                    text-wrap: pretty;
+                    font-weight: bold;
+                    background: linear-gradient(var(--clr-primary), var(--clr-terciary));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+    }
+    }
+
+    @media screen and (width > 800px) {
+        section {
+            padding-top: 6rem;
+            display: grid;
+            grid-template-columns: 600px max-content;
+            justify-content: center;
+            gap: 0;
+
+            .first {
+                align-items: flex-start;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -15px;
+                    top: 0;
+                    bottom: 0;
+                    border: 1px solid #dddddd1d;
+                }
+            }
+
+            .second {
+                order: -1;
+                width: 95%;
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    text-wrap: pretty;
+                }
+            }
+        }
+    }
+
+</style>

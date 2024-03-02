@@ -1,0 +1,104 @@
+---
+import Card from '../components/Card.astro'
+import DATA_PROJECTS from '../scripts/data'
+---
+
+<section id="proyectos">
+    <h4 class="title">Proyectos</h4>
+
+    <div>
+        {
+            DATA_PROJECTS.map(project => {
+                return(
+                    <Card
+                        title={project.title}
+                        description={project.description}
+                        img={project.img}
+                        tecnologias={project.tecnologias}
+                        repo={project.repo}
+                        deploy={project.deploy}
+                    />
+                )
+            })
+        }
+    </div>
+    <i class="bi bi-arrow-left"></i>
+    <i class="bi bi-arrow-right"></i>
+</section>
+
+<style>
+    section {
+        position: relative;
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h4 {
+            font-size: 1.7rem;
+            text-decoration: underline var(--clr-primary);
+        }
+
+        div {
+            width: 100vw;
+            display: flex;
+            overflow-y: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .bi-arrow-left {
+            position: absolute;
+            left: 10px;
+            top: 120px;
+        }
+
+        .bi-arrow-right {
+            position: absolute;
+            right: 10px;
+            top: 120px;
+        }
+    }
+
+    @media screen and (width > 500px){
+        section {
+            padding: 0 1rem;
+            padding-top: 6rem;
+            margin-top: 3rem;
+            h4 {
+                font-size: 1.7rem;
+                text-decoration: underline var(--clr-primary);
+            }
+
+            div {
+                width: auto;
+                display: flex;
+                overflow: hidden;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .bi-arrow-left {
+                display: none;
+            }
+
+            .bi-arrow-right {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (width > 800px) {
+        section {
+
+
+            .title {
+                font-size: 2.1rem;
+            }
+        }
+    }
+
+
+</style>

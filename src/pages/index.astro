@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './header.astro';
+import Hero from './hero.astro';
+import Skills from './skills.astro';
+import Projects from './projects.astro';
+import Footer from './footer.astro';
+---
+
+<Layout title="Ángel Altieri - Portfolio">
+	<div>
+		<Header />
+		<Hero />
+	</div>
+	<main>
+		<Skills/>
+		<Projects />
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	div {
+		min-height: 100vh;
+	}
+	main {
+		margin-block: 4rem 2rem;
+	}
+
+	@media screen and (width > 800px) {
+		div {
+			min-height: 70vh;
+		}
+	}
+</style>

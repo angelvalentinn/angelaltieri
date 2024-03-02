@@ -1,0 +1,134 @@
+---
+const { title, description, img , tecnologias, repo, deploy  } = Astro.props;
+---
+
+<article >
+    <img loading="lazy" src={img} alt=`Imagen sobre ${title}`>
+    <div class="proyecto-card-texts">
+        <h4 class="name-card">{title}</h4>
+        <p> 
+            {description}
+        </p>
+        <ul class="proyecto-ul">
+            {
+                tecnologias.map(tecnologia => {
+                    return(
+                        <li>{tecnologia}</li>
+                    )
+                })
+            }
+        </ul>
+        <div class="proyecto-buttons">
+            <a target="_blank" data-tooltip="Ver repo" href={repo}><i class="bi bi-github" data-tooltip="Ver repositorio"></i></a>
+            <a target="_blank" data-tooltip="Ver Deploy" href={deploy}><i class="bi bi-link" data-tooltip="Ver Deploy"></i></a>
+        </div>
+    </div>
+</article>
+
+<style>
+    article {
+        scroll-snap-align: center;
+        background-color: var(--clr-card);
+        border: 1px solid var(--clr-card);
+        transition: .3s ease all;
+
+        img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .proyecto-card-texts {
+            overflow-x: hidden;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            color: var(--clr-white-text);
+
+            h4 {
+                font-size: 1.3rem;
+                text-decoration: none;
+            }
+
+            p {
+                color: #fff;
+                margin-top: 0;
+                line-height: 1.2;
+            }
+
+            .proyecto-ul {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+
+                li {
+                    border: 1px solid #dddddd42;
+                    padding: 0.2rem;
+                }
+            }
+
+            .proyecto-buttons {
+                display: flex;
+                gap: 1.5rem;
+
+                a {
+                    transition: .3s ease all;
+                    position: relative;
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+
+                    &:hover {
+                        color: var(--clr-primary);
+                    }
+
+                    &:last-child {
+                        color: var(--clr-primary);
+
+                        &:hover {
+                            color: var(--clr-white-text);
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+    @media screen and (width > 500px) {
+        article {
+            width: 300px;
+            flex-wrap: wrap;
+            border-radius: 8px;
+            &:hover {
+                border: 1px solid var(--clr-primary);
+                border-radius: 8px 8px 30px 8px;
+
+                h4 {
+                    color: var(--clr-primary);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 140px;
+                object-fit: cover;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+
+            .proyecto-card-texts {
+                p {
+                    min-height: 60px;
+                }
+            }
+
+        }
+    }
+</style>
