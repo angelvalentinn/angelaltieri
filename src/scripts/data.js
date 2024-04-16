@@ -53,44 +53,6 @@ const DATA_PROJECTS = [
     },
 
     {
-        title: 'Calculadora',
-        description: 'Proyecto de una calculadora con JS nativo.',
-        img: '../../../imgs_proyects/calculadora.webp',
-        tecnologias: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        repo: 'https://github.com/angelvalentinn/Calculadora',
-        deploy: 'https://angelvalentinn.github.io/Calculadora/',
-    },
-
-    {
-        title: 'Memotest',
-        description: 'Proyecto del juego Memo test. Mi primer proyecto en React.',
-        img: '../../../imgs_proyects/memogame.webp',
-        tecnologias: [
-            'React',
-            'Tailwind',
-        ],
-        repo: 'https://github.com/angelvalentinn/memotest',
-        deploy: 'https://memotest-altieri.netlify.app/',
-    },
-
-    {
-        title: 'Piedra, papel o tijera.',
-        description: 'Proyecto sobre piedra, papel o tijera.',
-        img: '../../../imgs_proyects/ppot.webp',
-        tecnologias: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        repo: 'https://github.com/angelvalentinn/rock-paper-scissor',
-        deploy: 'https://angelvalentinn.github.io/rock-paper-scissor/',
-    },
-
-    {
         title: 'App Clima',
         description: 'Proyecto sobre buscador de Clima, consumiendo API.',
         img: '../../../imgs_proyects/app-clima.webp',
@@ -104,18 +66,6 @@ const DATA_PROJECTS = [
         deploy: 'https://angelvalentinn.github.io/app-clima/',
     },
 
-    {
-        title: 'To do List',
-        description: 'Proyecto CRUD persistente con Local Storage.',
-        img: '../../../imgs_proyects/todolist.webp',
-        tecnologias: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        repo: 'https://github.com/angelvalentinn/todolist',
-        deploy: 'https://angelvalentinn.github.io/todolist/',
-    },
 ]
 
 export default DATA_PROJECTS;

@@ -24,9 +24,11 @@
 
 <style>
     section {
-        padding-top: 4rem;
+        margin-top: 6rem;
         padding-inline: 1rem;
         display: flex;
+        min-height: 100vh;
+        align-items: center;
         flex-direction: column;
         gap: 3rem;
         -webkit-animation: fade-in-fwd 2s both;
@@ -81,12 +83,10 @@
         }
     }
 
-    
 
     @media screen and (width > 550px) {
         section {
-            margin-top: 5rem;
-
+            
             .first {
                 gap: .5rem;
 
@@ -117,7 +117,7 @@
 
     @media screen and (width > 800px) {
         section {
-            padding-top: 6rem;
+            margin-top: 2rem;
             display: grid;
             grid-template-columns: 600px max-content;
             justify-content: center;

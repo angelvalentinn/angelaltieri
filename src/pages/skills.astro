@@ -1,7 +1,3 @@
----
-
----
-
 <section id="habilidades">
     <article>
         <h3>Habilidades</h3>
@@ -75,6 +71,7 @@
                 font-size: 1.7rem;
                 text-decoration: underline var(--clr-primary);
             }
+            
             .container-skills {
                 border: 1px solid #dddddd27;
                 box-shadow: 0 0 10px 0 #ffffff2f;
@@ -90,7 +87,67 @@
                     height: 65px;
                     position: relative;
                     cursor: pointer;
-                    
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    @keyframes ida-y-vuelta {
+        0% { opacity: 0; }
+        50% { opacity: .5; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes salida-brusca {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    @media screen and (width > 500px) {
+        section {
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+
+        article {
+            
+            h3 {
+                font-size: 1.7rem;
+                text-decoration: underline var(--clr-primary);
+            }
+            
+            .container-skills {
+                border: 1px solid #dddddd27;
+                box-shadow: 0 0 10px 0 #ffffff2f;
+                padding: 1rem;
+                border-radius: 8px;
+                margin-top: 1.3rem;
+                display: grid;
+                grid-template-columns: repeat(3, max-content);
+                gap: .5rem;
+                min-height: 300px;
+                div {
+                    width: 65px;
+                    height: 65px;
+                    position: relative;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+
                     &:hover {
                         filter: drop-shadow(0 0 10px #ffffff39);
                     }
@@ -130,20 +187,12 @@
                         
                         animation: ida-y-vuelta 2s ease-in-out infinite, salida-brusca .3s forwards;
                     }
+
+
                 }
             }
         }
     }
-
-    @keyframes ida-y-vuelta {
-        0% { opacity: 0; }
-        50% { opacity: .5; }
-        100% { opacity: 1; }
-    }
-
-    @keyframes salida-brusca {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
     }
 
     @media screen and (width > 800px) {
