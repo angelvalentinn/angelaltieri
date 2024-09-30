@@ -1,6 +1,10 @@
 <section id="habilidades">
     <article>
         <h3>Habilidades</h3>
+        <p>Estas son tecnologías que utilicé a lo largo de mi aprendizaje, tanto en los estudios
+            de la universidad como en mi camino de autodidacta. Cada una de ellas contribuyó a mi formación
+            y experiencia, permitiendome crecer y adaptarme en este campo.
+        </p>
         <div class="container-skills">
             <div data-tooltip="HTML">
                 <img loading="lazy" src="../../skills/html.webp" alt="Logo de HTML">
@@ -33,25 +37,24 @@
             <div data-tooltip="Firebase">
                 <img loading="lazy" src="../../skills/firebase.webp" alt="Logo de Firebase">
             </div>
+
+            <div data-tooltip="Java">
+                <img loading="lazy" src="../../skills/java.webp" alt="Logo de Java">
+            </div>
+
+            <div data-tooltip="Mysql">
+                <img loading="lazy" src="../../skills/mysql.webp" alt="Logo de Firebase">
+            </div>
+
             
-        </div>
-    </article>
-
-    <article>
-        <h3>Aprendiendo</h3>
-        <div class="container-skills">
-            <div data-tooltip="Node JS">
-                <img loading="lazy" src="../../learning/nodejs.webp" alt="Logo de Node JS">
-            </div>
-
-            <div data-tooltip="Express">
-                <img loading="lazy" src="../../learning/express.webp" alt="Logo de express JS">
-            </div>
-
-            <div data-tooltip="MongoDB">
-                <img loading="lazy" src="../../learning/mongodb.webp" alt="Logo de MongoDB">
+            <div data-tooltip="Kotlin">
+                <img loading="lazy" src="../../skills/kotlin.webp" alt="Logo de Kotlin">
             </div>
             
+            <div data-tooltip="C">
+                <img loading="lazy" src="../../skills/c.webp" alt="Logo de C">
+            </div>
+
         </div>
     </article>
 </section>
@@ -66,12 +69,20 @@
         gap: 3rem;
 
         article {
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             h3 {
                 font-size: 1.7rem;
                 text-decoration: underline var(--clr-primary);
             }
             
+            p {
+                padding-inline: 1rem;
+                max-width: 500px;
+                text-wrap: pretty;
+            }
+
             .container-skills {
                 border: 1px solid #dddddd27;
                 box-shadow: 0 0 10px 0 #ffffff2f;
@@ -125,7 +136,8 @@
                 font-size: 1.7rem;
                 text-decoration: underline var(--clr-primary);
             }
-            
+
+        
             .container-skills {
                 border: 1px solid #dddddd27;
                 box-shadow: 0 0 10px 0 #ffffff2f;
@@ -133,7 +145,7 @@
                 border-radius: 8px;
                 margin-top: 1.3rem;
                 display: grid;
-                grid-template-columns: repeat(3, max-content);
+                grid-template-columns: repeat(4, max-content);
                 gap: .5rem;
                 min-height: 300px;
                 div {
